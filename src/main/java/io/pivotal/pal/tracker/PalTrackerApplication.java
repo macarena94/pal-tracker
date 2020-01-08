@@ -12,7 +12,7 @@ public class PalTrackerApplication {
         SpringApplication.run(PalTrackerApplication.class, args);
     }
 
-    @Bean
+    @Bean //Nota: Se puede cambiar este bean si pones una anotacion de repository en el JdbcTimeEntryRepository o en el Inmemory en funcin de cual vayas a usar
     TimeEntryRepository timeEntryRepository(DataSource dataSource) {
         return new JdbcTimeEntryRepository(dataSource);
     }
